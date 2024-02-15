@@ -53,7 +53,7 @@ document.addEventListener ('click' , function (e) { //Apaga o tarefa, selecionad
     }
 })
 
-function salvarTarefas () {
+function salvarTarefas () { //Salva as tarefas no localStorageJSON, CONVERTE PARA  O OBJETO PARA STRING
     const liTarefas = lista.querySelectorAll('li')
     const listaDeTarefas = []
 
@@ -66,8 +66,8 @@ function salvarTarefas () {
     localStorage.setItem('tarefas' , tarefasJSON)
 }
 
-function adicionaTarefasSalvas() {
-    const tarefas = localStorage.getItem();
+function adicionaTarefasSalvas() { //Pegas as tarefas do localStorage e salva como tarefa
+    const tarefas = localStorage.getItem('tarefas');
     const listaDeTarefas = JSON.parse(tarefas);
 
     for (let tarefa of listaDeTarefas) {
