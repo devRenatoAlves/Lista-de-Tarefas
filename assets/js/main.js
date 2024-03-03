@@ -5,7 +5,7 @@ const lista = document.querySelector('.tarefas')
 
 
 
-function limpaInput () { //Limpa o input e focaliza no input
+function limpaInput () { //Limpa input e focaliza no input
     inputTarefa.value = ''
     inputTarefa.focus()
 }
