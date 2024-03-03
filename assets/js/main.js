@@ -37,7 +37,7 @@ botao.addEventListener('click' , function() {   //Acão de clicar no botao e ava
 })
 
 function criaBotaoApagar (li) { //Cria o botão de apagar
-    li.innerText += ' '
+    li.innerText +=  ''
     const botaoApagar = document.createElement('button')
     botaoApagar.setAttribute('class' , 'apagar')
     botaoApagar.innerText = 'Apagar'
@@ -66,7 +66,7 @@ function salvarTarefas () { //Salva as tarefas no localStorageJSON, CONVERTE PAR
     localStorage.setItem('tarefas' , tarefasJSON)
 }
 
-function adicionaTarefasSalvas() { //Pegas as tarefas do localStorage e salva como tarefa
+function adicionaTarefasSalvas() { //Pega as tarefas do localStorage e salva como tarefa
     const tarefas = localStorage.getItem('tarefas');
     const listaDeTarefas = JSON.parse(tarefas);
 
